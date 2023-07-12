@@ -23,7 +23,8 @@ public class EtudiantController {
 
     @GetMapping("etudiant/{numPlace}/{session}")
     public Etudiant getEtudiantByNumPlace(@PathVariable long numPlace,@PathVariable long session){
-      return etudiantRepository.findEtudiantByNumPlaceAndSession(numPlace,session);
+
+        return etudiantRepository.findEtudiantByNumPlaceAndSession(numPlace,session);
     }@GetMapping("allEtudiant/{academie}/{session}")
     public List<Etudiant> getAllEtudiant(@PathVariable String academie,@PathVariable long session){
       return etudiantRepository.findAllByAcademieAndSession(academie,session);
